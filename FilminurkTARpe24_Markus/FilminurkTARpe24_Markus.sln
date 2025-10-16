@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilminurkTARpe24_Markus", "FilminurkTARpe24_Markus.csproj", "{E17698B8-3AE5-44BF-A539-D12442480165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filminurk.Core", "..\Filminurk.Core\Filminurk.Core.csproj", "{5C15A17D-5B02-434B-8F5C-BB1221C49CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filminurk.ApplicationServices", "..\Filminurk.ApplicationServices\Filminurk.ApplicationServices.csproj", "{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filmnurk.Data", "..\Filmnurk.Data\Filmnurk.Data.csproj", "{7B57EEBA-6488-4383-A860-91FA088D4F87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{E17698B8-3AE5-44BF-A539-D12442480165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E17698B8-3AE5-44BF-A539-D12442480165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E17698B8-3AE5-44BF-A539-D12442480165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C15A17D-5B02-434B-8F5C-BB1221C49CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C15A17D-5B02-434B-8F5C-BB1221C49CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C15A17D-5B02-434B-8F5C-BB1221C49CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C15A17D-5B02-434B-8F5C-BB1221C49CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B57EEBA-6488-4383-A860-91FA088D4F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B57EEBA-6488-4383-A860-91FA088D4F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B57EEBA-6488-4383-A860-91FA088D4F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B57EEBA-6488-4383-A860-91FA088D4F87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

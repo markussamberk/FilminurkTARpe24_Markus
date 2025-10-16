@@ -24,7 +24,7 @@ namespace FilminurkTARpe24_Markus.Controllers
                 Title = x.Title,
                 FirstPublished = x.FirstPublished,
                 CurrentRating = x.CurrentRating,
-                CountryOfOrigin = x.CountryOfOrigin,
+                TimesWatched = x.TimesWatched,
                 MovieGenre = x.MovieGenre,
             });
         }
@@ -42,7 +42,7 @@ namespace FilminurkTARpe24_Markus.Controllers
                 Director = vm.Director,
                 Actors = vm.Actors,
                 CurrentRating = vm.CurrentRating,
-                CountryOfOrigin = vm.CountryOfOrigin,
+                TimesWatched = vm.TimesWatched,
                 MovieGenre = vm.MovieGenre,
                 SubGenre = vm.SubGenre,
                 EntryCreatedAt = vm.EntryCreatedAt,
