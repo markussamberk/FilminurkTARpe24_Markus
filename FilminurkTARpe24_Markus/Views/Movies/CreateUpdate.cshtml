@@ -1,1 +1,5 @@
-﻿
+﻿@foreach(var images in Model.Image)
+{
+	<partial name="images" model="Images" />
+	<input asp-action="removeImage" asp-controller="Movies" asp-route-ImageID="@images.ImageID" type="submit" class="btn btn-success" value=""/>
+}
