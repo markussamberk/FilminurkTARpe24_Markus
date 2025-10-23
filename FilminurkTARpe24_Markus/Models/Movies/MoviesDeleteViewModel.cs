@@ -11,8 +11,10 @@
         public double? CurrentRating { get; set; }
 
         
+        public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
+
         public string? CountryOfOrigin { get; set; }
         public Genre? MovieGenre { get; set; }
-        public 
+        public Genre? SubGenre { get; set; }
     }
 }

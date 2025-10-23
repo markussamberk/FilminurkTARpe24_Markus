@@ -1,8 +1,6 @@
-﻿using Filminurk.Core.Domain;
-
-namespace FilminurkTARpe24_Markus.Models.Movies
+﻿namespace FilminurkTARpe24_Markus.Models.Movies
 {
-    public class MoviesCreateViewModel
+    public class MoviesDetailsViewModel
     {
         public Guid? ID { get; set; }
         public string? Title { get; set; }
@@ -13,7 +11,6 @@ namespace FilminurkTARpe24_Markus.Models.Movies
         public double? CurrentRating { get; set; }
 
         // Kaasasolevate piltide andmeomadused
-        public List<IFormFile> Files { get; set; }
         public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
 
         public string? TimesWatched { get; set; }
