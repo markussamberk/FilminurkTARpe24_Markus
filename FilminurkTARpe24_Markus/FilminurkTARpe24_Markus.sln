@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filminurk.Core", "..\Filmin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filminurk.ApplicationServices", "..\Filminurk.ApplicationServices\Filminurk.ApplicationServices.csproj", "{CF0C7820-B77F-46FE-9DB9-5FAF5503791E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filmnurk.Data", "..\Filmnurk.Data\Filmnurk.Data.csproj", "{7B57EEBA-6488-4383-A860-91FA088D4F87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filminurk.Data", "..\Filmnurk.Data\Filminurk.Data.csproj", "{7B57EEBA-6488-4383-A860-91FA088D4F87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Filminurk.Core.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Filmnurk.Data
 {

@@ -1,3 +1,5 @@
+using Filminurk.ApplicationServices.Services;
+using Filminurk.Core.ServiceInterface;
 using FilminurkTARpe24_Markus.ServiceInterface;
 using FilminurkTARpe24_Markus.Services;
 using Filmnurk.Data;
@@ -6,9 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IFilesServices, FilesServices>();
 builder.Services.AddDbContext<FilminurkTARpe24Context>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString
-("DefaultConnection")))
+("DefaultConnection")));
 builder.Services.AddScoped<IMovieServices, MovieServices>();
 
 var app = builder.Build();

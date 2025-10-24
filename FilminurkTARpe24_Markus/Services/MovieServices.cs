@@ -31,13 +31,19 @@ namespace FilminurkTARpe24_Markus.Services
             movie.Description = dto.Description;
             movie.CurrentRating = dto.CurrentRating;
             movie.TimesWatched = dto.TimesWatched;
-            movie.FirstPublished = dto.FirstPublished;
+            movie.FirstPublished =(DateOnly)dto.FirstPublished;
             movie.Actors = dto.Actors; 
             movie.Director = dto.Director;
             movie.MovieGenre = dto.MovieGenre;
             movie.SubGenre = dto.SubGenre;
-            movie.EntryCreatedAt = dto.EntryCreatedAt;
+            movie.EntryCreatedAt = DateTime.Now;
             movie.EntryModifiedAt = DateTime.Now;
+            _filesServices.FilesToApi(dto, movie);
+
+            await _context.Movies.AddAsync(movie);
+            await _context.SaveChangesAsync();
+
+            return movie;
         }
 
         public async Task<Movie> DetailsAsync(Guid id)
@@ -66,6 +72,8 @@ namespace FilminurkTARpe24_Markus.Services
 
             return result;
         }
+
+
     }
 }
 

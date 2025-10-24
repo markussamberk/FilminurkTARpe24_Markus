@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Filminurk.ApplicationServices\Filminurk.ApplicationServices.csproj" />
     <ProjectReference Include="..\Filminurk.Core\Filminurk.Core.csproj" />
-    <ProjectReference Include="..\Filmnurk.Data\Filmnurk.Data.csproj" />
+    <ProjectReference Include="..\Filmnurk.Data\Filminurk.Data.csproj" />
   </ItemGroup>
 
 </Project>

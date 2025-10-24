@@ -4,6 +4,7 @@ using FilminurkTARpe24_Markus.Models.Movies;
 using FilminurkTARpe24_Markus.ServiceInterface;
 using Filmnurk.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilminurkTARpe24_Markus.Controllers
 {
@@ -105,6 +106,18 @@ namespace FilminurkTARpe24_Markus.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return RedirectToAction(nameof(Index));
+        }
+        private async Task<ImageViewModel[]> FileFromDatabase(Guid id)
+        {
+            return await _context.FilesToApi
+                .Where(x => x.MovieID == id)
+                .Select(y => new ImageViewModel
+                {
+                    ImageID = y.ImageID,
+                    MovieID = y.MovieID,
+                    IsPoster = y.IsPoster,
+                    FilePath = y.ExistingFilePath
+                }).ToArrayAsync();
         }
     }
 }
