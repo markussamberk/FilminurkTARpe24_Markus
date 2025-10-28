@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Filminurk.Core.Domain;
 using Filminurk.Core.Dto;
 using Filminurk.Core.ServiceInterface;
+using Filmnurk.Data;
 using Microsoft.Extensions.Hosting;
 
 namespace Filminurk.ApplicationServices.Services
@@ -15,7 +16,7 @@ namespace Filminurk.ApplicationServices.Services
         private readonly IHostEnvironment _webHost;
         private readonly FilmiNurkTARpe24Context _context;
 
-        public FilesServices(IHostEnvironment webHost, FilmiNurkTARpe24Context context)
+        public FilesServices(IHostEnvironment webHost, FilminurkTARpe24Context context)
         {
             _webHost = webHost;
             _context = context;
