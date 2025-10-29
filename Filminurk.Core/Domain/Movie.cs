@@ -22,7 +22,11 @@ namespace Filminurk.Core.Domain
 
 
         public int? TimesWatched { get; set; }
-        public MovieGenre? MovieGenre { get; set; }
-        public MovieGenre? SubGenre { get; set; }
+        public int? Length { get; set; }
+        public int? Budget { get; set; }
+
+        public DateTime? EntryCreatedAt { get; set; }
+        public DateTime? EntryModifiedAt { get; set; }
+        
     }
 }

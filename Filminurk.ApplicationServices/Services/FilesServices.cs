@@ -7,6 +7,7 @@ using Filminurk.Core.Domain;
 using Filminurk.Core.Dto;
 using Filminurk.Core.ServiceInterface;
 using Filmnurk.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 
 namespace Filminurk.ApplicationServices.Services
@@ -14,7 +15,7 @@ namespace Filminurk.ApplicationServices.Services
     public class FilesServices : IFilesServices
     {
         private readonly IHostEnvironment _webHost;
-        private readonly FilmiNurkTARpe24Context _context;
+        private readonly FilminurkTARpe24Context _context;
 
         public FilesServices(IHostEnvironment webHost, FilminurkTARpe24Context context)
         {
@@ -28,7 +29,7 @@ namespace Filminurk.ApplicationServices.Services
             {
                 if (Directory.Exists(_webHost.ContentRootPath + "\\wwwroot\\multipleFileUpload\\"))
                 {
-                    Directory.CreateDirectory(_webHost.ContentRootPath + "\\wwwroot\\multipleFileUpload\\")
+                    Directory.CreateDirectory(_webHost.ContentRootPath + "\\wwwroot\\multipleFileUpload\\");
                 }
 
                 foreach (var file in dto.Files)

@@ -34,8 +34,8 @@ namespace FilminurkTARpe24_Markus.Services
             movie.FirstPublished =(DateOnly)dto.FirstPublished;
             movie.Actors = dto.Actors; 
             movie.Director = dto.Director;
-            movie.MovieGenre = dto.MovieGenre;
-            movie.SubGenre = dto.SubGenre;
+            movie.Length = dto.Length;
+            movie.Budget = dto.Budget;
             movie.EntryCreatedAt = DateTime.Now;
             movie.EntryModifiedAt = DateTime.Now;
             _filesServices.FilesToApi(dto, movie);
@@ -55,7 +55,7 @@ namespace FilminurkTARpe24_Markus.Services
         public async Task<Movie> Delete (Guid id)
         {
             var result = await _context.Movies
-                .FirstOrDefaultAsync(m = m.ID == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
 
             var images = await _context.FilesToApi
                 .Where(x => x.MovieID == id)

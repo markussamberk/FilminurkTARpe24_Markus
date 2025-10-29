@@ -2,7 +2,7 @@
 
 namespace FilminurkTARpe24_Markus.Models.Movies
 {
-    public class MoviesCreateViewModel
+    public class MoviesCreateUpdateViewModel
     {
         public Guid? ID { get; set; }
         public string? Title { get; set; }
@@ -16,9 +16,9 @@ namespace FilminurkTARpe24_Markus.Models.Movies
         public List<IFormFile> Files { get; set; }
         public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
 
-        public string? TimesWatched { get; set; }
-        public MovieGenre? MovieGenre { get; set; }
-        public MovieGenre? SubGenre { get; set; }
+        public int? TimesWatched { get; set; }
+        public int? Length { get; set; }
+        public int? Budget { get; set; }
 
         public DateTime? EntryCreatedAt { get; set; }
         public DateTime? EntryModifiedAt { get; set; }

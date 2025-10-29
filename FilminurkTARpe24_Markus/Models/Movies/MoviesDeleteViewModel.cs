@@ -13,8 +13,12 @@
         
         public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
 
-        public string? CountryOfOrigin { get; set; }
-        public Genre? MovieGenre { get; set; }
-        public Genre? SubGenre { get; set; }
+        public int? TimesWatched { get; set; }
+        public int? Length { get; set; }
+        public int? Budget { get; set; }
+
+        public DateTime? EntryCreatedAt { get; set; }
+        public DateTime? EntryModifiedAt { get; set; }
+
     }
 }

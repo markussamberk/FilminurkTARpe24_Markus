@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Filminurk.Core.Domain
 {
-    internal class MovieGenre
+    internal class UserComment
     {
     }
 }

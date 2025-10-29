@@ -13,9 +13,9 @@
         // Kaasasolevate piltide andmeomadused
         public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
 
-        public string? TimesWatched { get; set; }
-        public MovieGenre? MovieGenre { get; set; }
-        public MovieGenre? SubGenre { get; set; }
+        public int? TimesWatched { get; set; }
+        public int? Length { get; set; }
+        public int? Budget { get; set; }
 
         public DateTime? EntryCreatedAt { get; set; }
         public DateTime? EntryModifiedAt { get; set; }
