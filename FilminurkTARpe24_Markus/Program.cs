@@ -1,14 +1,15 @@
-using Filminurk.ApplicationServices.Services;
 using Filminurk.Core.ServiceInterface;
 using FilminurkTARpe24_Markus.ServiceInterface;
-using FilminurkTARpe24_Markus.Services;
-using Filmnurk.Data;
+using Filminurk.Data;
+using Filminurk.ApplicationServices.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IFilesServices, FilesServices>();
+builder.Services.AddScoped<IUserCommentsServices, UserCommentsServices>();
 builder.Services.AddDbContext<FilminurkTARpe24Context>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString
 ("DefaultConnection")));

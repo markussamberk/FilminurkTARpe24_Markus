@@ -1,7 +1,7 @@
 ﻿using Filminurk.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Filmnurk.Data
+namespace Filminurk.Data
 {
     public class FilminurkTARpe24Context : DbContext
     {
@@ -9,5 +9,6 @@ namespace Filmnurk.Data
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<FileToApi> FilesToApi { get; set; }
+        public DbSet<UserComment> UserComments { get; set; }
      }
 }

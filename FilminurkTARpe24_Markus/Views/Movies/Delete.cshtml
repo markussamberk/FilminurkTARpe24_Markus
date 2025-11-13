@@ -46,22 +46,28 @@
 	</dl>
 	<dl class="row">
 		<div class="form-group-row">
-			<label asp-for="CountryOfOrigin" class="col-sm-2 col-form-label"></label>
-			@Html.DisplayFor(model => model.CountryOfOrigin)
+			<label asp-for="TimesWatched" class="col-sm-2 col-form-label"></label>
+			@Html.DisplayFor(model => model.TimesWatched)
 		</div>
 	</dl>
 	</dl>
 	<dl class="row">
 		<div class="form-group-row">
-			<label asp-for="MovieGenre" class="col-sm-2 col-form-label"></label>
-			@Html.DisplayFor(model => model.MovieGenre)
+			<label asp-for="Length" class="col-sm-2 col-form-label"></label>
+			@Html.DisplayFor(model => model.Length)
 		</div>
 	</dl>
 	</dl>
 	<dl class="row">
 		<div class="form-group-row">
-			<label asp-for="SubGenre" class="col-sm-2 col-form-label"></label>
-			@Html.DisplayFor(model => model.SubGenre)
+			<label asp-for="Budget" class="col-sm-2 col-form-label"></label>
+			@Html.DisplayFor(model => model.Budget)
 		</div>
 	</dl>
+	<hr />
+	<form asp-action="DeleteConfirmation">
+		<input type="hidden" asp-for="ID"/>
+		<input type="submit" value="Remove" class="btn btn-danger"/>
+		<a asp-action="Index" asp-controller="Movies" class="btn btn-success">Return to list</a>
+	</form>
 </div>

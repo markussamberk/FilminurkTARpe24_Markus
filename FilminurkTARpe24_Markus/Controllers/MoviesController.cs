@@ -2,7 +2,7 @@
 using Filminurk.Core.ServiceInterface;
 using FilminurkTARpe24_Markus.Models.Movies;
 using FilminurkTARpe24_Markus.ServiceInterface;
-using Filmnurk.Data;
+using Filminurk.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
