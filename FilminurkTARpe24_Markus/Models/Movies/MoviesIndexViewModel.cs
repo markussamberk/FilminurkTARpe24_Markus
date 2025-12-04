@@ -1,4 +1,5 @@
-﻿using Filminurk.Core.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+using Filminurk.Core.Domain;
 
 namespace FilminurkTARpe24_Markus.Models.Movies
 {

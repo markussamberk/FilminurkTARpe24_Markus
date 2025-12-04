@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<FilminurkTARpe24_Markus.Models.FavoriteLists.FavoriteListsIndexViewModel>
+
 @{
+	int rowNumber = 1;
+	int currentRow = 1;
+	int currentTile = 1;
+	int tilesInRow = 1;
 }
+<div>
+	<a asp-action="CreateList" asp-controller="FavoriteLists" class="btn btn-primary">Tee uus lemmikute nimekiri</a>
+</div>
+<div>
+	<form method="post">
+		<table class="table">
+			<thead>
+				@if (!Model.Any())
+				{
+					<tr>
+						<th scope="col" colspan="2">
+							<span>Kahjuks ei leidnud ühtegi lemmikute nimekirja.</span>
+						</th>
+					</tr>
+				}
+				else
+				{
+					<tr>
+						<th scpoe="col" colspan="2">
+							<span>Sinu nimekirjad:</span>
+						</th>
+					</tr>
+				}
+			</thead>
+			<tbody>
+				@if (!Model.Any())
+				{
+					<table>
+						<tr>
+							<td colspan="2">Sorry, no list</td>
+						</tr>
+						<tr>
+							<td><img width="128" src="~/lib/defaultassets/image/noposter.png"/></td>
+						</tr>
+					</table>
+				}
+				else
+				{
+					
+				}
+			</tbody>
+		</table>
+	</form>
+</div>
