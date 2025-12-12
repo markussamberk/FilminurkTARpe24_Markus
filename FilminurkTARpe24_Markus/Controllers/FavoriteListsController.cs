@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using Filminurk.ApplicationServices.Services;
 using Filminurk.Core.Domain;
 using Filminurk.Core.Dto;
+using Filminurk.Core.ServiceInterface;
 using Filminurk.Data;
 using FilminurkTARpe24_Markus.Models.FavoriteLists;
 using FilminurkTARpe24_Markus.Models.Movies;
@@ -12,11 +14,12 @@ namespace FilminurkTARpe24_Markus.Controllers
     public class FavoriteListsController : Controller
     {
         private readonly FilminurkTARpe24Context _context;
-        //favoritelistservice add later
+        private readonly IFavoriteListsServices _favoriteListsServices;
         //fileservice add later
-        public FavoriteListsController(FilminurkTARpe24Context context)
+        public FavoriteListsController(FilminurkTARpe24Context context, IFavoriteListsServices favoriteListsServices)
         {
             _context = context;
+            _favoriteListsServices = favoriteListsServices;
         }
         public IActionResult Index()
         {
@@ -81,7 +84,7 @@ namespace FilminurkTARpe24_Markus.Controllers
             {
                 return NotFound();
             }*/
-            Console.BackgroundColor
+         
             return View("UserTogglePrivacy", thisList);
         }
         [HttpPost]
@@ -132,7 +135,7 @@ namespace FilminurkTARpe24_Markus.Controllers
             dto.ListDeletedAt = DateTime.Now;
             ViewData["UpdateServiceType"] = "Delete";
             
-            var result = await _favoriteListsServices.Update(dto);
+            var result = await _favoriteListsServices.Update(dto, "Delete");
             if (result == null) 
             {
                 NotFound();

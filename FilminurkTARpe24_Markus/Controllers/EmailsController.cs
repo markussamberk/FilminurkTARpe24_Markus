@@ -1,4 +1,5 @@
 ﻿using Filminurk.Core.Dto;
+using Filminurk.Core.ServiceInterface;
 using FilminurkTARpe24_Markus.Models.Emails;
 using Microsoft.AspNetCore.Mvc;
 

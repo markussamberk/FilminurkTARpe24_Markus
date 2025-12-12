@@ -6,12 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Filminurk.Core.Domain;
 using Filminurk.Core.Dto;
+using Filminurk.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Filminurk.ApplicationServices.Services
 {
     public class FavoriteListsServices
     {
+        private readonly FilminurkTARpe24Context _context;
+        public FavoriteListsServices(FilminurkTARpe24Context context)
+        {
+            _context = context;
+        }
         public async Task<FavoriteList> Update(FavoriteListDTO updatedList, string typeOfMethod)
         {
             

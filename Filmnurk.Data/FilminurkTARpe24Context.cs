@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Filminurk.Core.Domain;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Filminurk.Data
@@ -13,5 +14,7 @@ namespace Filminurk.Data
         public DbSet<UserComment> UserComments { get; set; }
         public DbSet<FavoriteList> FavoriteLists { get; set; }
         public DbSet<FileToDatabase> FilesToDatabase { get; set; }
+        public DbSet<IdentityRole> IdentityRoles { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
      }
 }
